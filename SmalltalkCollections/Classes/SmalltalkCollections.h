@@ -1,5 +1,5 @@
 //
-//  Collections.h
+//  SmalltalkCollections.h
 //  Pods
 //
 //  Created by Todd Blanchard on 12/18/16.
@@ -7,9 +7,6 @@
 //  Based in part on a library by Michael Dippery <michael@monkey-robot.com>
 //
 //
-
-#ifndef Collections_h
-#define Collections_h
 
 // Common Block Typedefs
 typedef BOOL    (^ElementFilter)(id); // select:, detect:, reject:
@@ -31,9 +28,8 @@ typedef void (^StringMutator)(NSString *);
 
 typedef void(^ElementIterator)(NSInteger);
 
-#import "NSArray+Collections.h"
-#import "NSDictionary+Collections.h"
-#import "NSNumber+Collections.h"
-#import "NSSet+Collections.h"
+#import "NSArray+SmalltalkCollections.h"
+#import "NSDictionary+SmalltalkCollections.h"
+#import "NSNumber+SmalltalkCollections.h"
+#import "NSSet+SmalltalkCollections.h"
 
-#endif /* Collections_h */

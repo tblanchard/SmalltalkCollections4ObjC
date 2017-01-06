@@ -8,7 +8,7 @@
 
 // https://github.com/Specta/Specta
 
-#import <SmalltalkCollections/Collections.h>
+#import <SmalltalkCollections/SmalltalkCollections.h>
 
 SpecBegin(InitialSpecs)
 

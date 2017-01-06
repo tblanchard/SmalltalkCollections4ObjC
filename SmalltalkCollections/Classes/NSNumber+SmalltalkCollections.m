@@ -1,12 +1,15 @@
 //
-//  NSNumber+Collections.m
-//  NumberStation
+//  Collections.h
+//  Pods
 //
-//  Created by Todd Blanchard on 3/21/14.
+//  Created by Todd Blanchard on 12/18/16.
+//
+//  Based in part on a library by Michael Dippery <michael@monkey-robot.com>
 //
 //
 
-#import "NSNumber+Collections.h"
+
+#import "NSNumber+SmalltalkCollections.h"
 
 @implementation NSNumber (Collections)
 

@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-#import <SmalltalkCollections/Collections.h>
+#import <SmalltalkCollections/SmalltalkCollections.h>
 
 @interface TBAppDelegate : UIResponder <UIApplicationDelegate>
 

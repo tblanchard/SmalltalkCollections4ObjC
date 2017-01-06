@@ -1,13 +1,12 @@
 //
-//  NSNumber+Collections.h
-//  NumberStation
+//  NSNumber+SmalltalkCollections.h
 //
 //  Created by Todd Blanchard on 3/21/14.
 //
 //
 
 #import <Foundation/Foundation.h>
-#import "Collections.h"
+#import "SmalltalkCollections.h"
 
 @interface NSNumber (Collections)
 
