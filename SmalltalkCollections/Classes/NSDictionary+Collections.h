@@ -34,8 +34,8 @@
 - (instancetype)reject:(ElementFilter)block;
 - (instancetype)select:(ElementFilter)block;
 
--(id)at:(NSString*)key;
--(id)at:(NSString*)key ifAbsent:(id(^)())block;
+-(id)at:(id)key;
+-(id)at:(id)key ifAbsent:(ElementDefault)block;
 
 @end
 

@@ -160,7 +160,7 @@
 
 -(id)at:(NSUInteger)idx ifAbsent:(ElementDefault)block
 {
-    if(idx >= 0 && idx < [self count])
+    if(idx < [self count])
     {
         return [self objectAtIndex: idx];
     }

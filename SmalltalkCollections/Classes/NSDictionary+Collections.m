@@ -56,8 +56,30 @@
         }
     }
     return self;
-    
 }
+
+- (instancetype)keysDo:(ElementMutator)block
+{
+    if([self respondsToSelector:@selector(enumerateKeysAndObjectsUsingBlock:)])
+    {
+        [self enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            block(key);
+        }];
+    }
+    else
+    {
+        for (NSString* key in self) {
+            block([self objectForKey:key]);
+        }
+    }
+    return self;
+}
+
+- (instancetype)valuesDo:(ElementMutator)block
+{
+    return [self do:block];
+}
+
 - (instancetype)collect:(ElementTransformer)block
 {
     NSMutableDictionary* mutable = [NSMutableDictionary dictionaryWithCapacity:self.count];
