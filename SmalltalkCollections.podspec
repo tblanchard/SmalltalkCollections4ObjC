@@ -20,7 +20,7 @@ of blocks allows for a much more functional style of programming previously enjo
 (ObjectiveC's inspiration language).
                        DESC
 
-  s.homepage         = 'https://github.com/tblanchard/SmalltalkCollections'
+  s.homepage         = 'https://github.com/tblanchard/SmalltalkCollections4ObjC'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'tblanchard' => 'tblanchard@mac.com' }
