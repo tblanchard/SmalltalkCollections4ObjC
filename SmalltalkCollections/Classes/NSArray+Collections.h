@@ -1,0 +1,50 @@
+/*
+ * Copyright (C) 2011-2013 Michael Dippery <michael@monkey-robot.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+#import <Foundation/Foundation.h>
+#import "Collections.h"
+
+@interface NSArray (SmalltalkCollections)
+
+- (instancetype)do:(ElementMutator)block;
+- (instancetype)doWithIndex:(IndexedMutator)block;
+- (instancetype)collect:(ElementTransformer)block;
+- (instancetype)collectWithIndex:(IndexedTransformer)block;
+- (id)detect:(ElementFilter)block;
+- (id)detect:(ElementFilter)block ifNone:(ElementDefault)none;
+- (id)inject:(id)initial into:(ElementInjector)block;
+- (instancetype)reject:(ElementFilter)block;
+- (instancetype)select:(ElementFilter)block;
+
+-(instancetype)copyWithout:(id)object;
+-(instancetype)copyWith:(id)object;
+
+-(id)at:(NSUInteger)idx;
+-(id)at:(NSUInteger)idx ifAbsent:(ElementDefault)block;
+
+@end
+
+@interface NSMutableArray (SmalltalkCollections)
+
+-(void)at:(NSUInteger)idx put:(id)object;
+
+@end

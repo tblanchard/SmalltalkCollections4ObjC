@@ -9,23 +9,22 @@
 Pod::Spec.new do |s|
   s.name             = 'SmalltalkCollections'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SmalltalkCollections.'
+s.summary          = 'Categories that provide Smalltalk collections operations like collect: detect: do: etc...'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Loosely based on an older library by Michael Dippery <michael@monkey-robot.com>
+The primary thing holding back Objective C's standard collections was the absence of blocks.
+While the new block syntax is indeed horrific (see http://fuckingblocksyntax.com) the introduction
+of blocks allows for a much more functional style of programming previously enjoyed in Smalltalk
+(ObjectiveC's inspiration language).
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SmalltalkCollections'
+  s.homepage         = 'https://github.com/tblanchard/SmalltalkCollections'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'tblanchard' => 'tblanchard@mac.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SmalltalkCollections.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/tblanchard/SmalltalkCollections.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -36,7 +35,7 @@ TODO: Add long description of the pod here.
   #   'SmalltalkCollections' => ['SmalltalkCollections/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'SmalltalkCollections/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

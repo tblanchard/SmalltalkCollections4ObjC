@@ -8,8 +8,11 @@
 
 // https://github.com/Specta/Specta
 
+#import <SmalltalkCollections/Collections.h>
+
 SpecBegin(InitialSpecs)
 
+/*
 describe(@"these will fail", ^{
 
     it(@"can do maths", ^{
@@ -41,6 +44,18 @@ describe(@"these will pass", ^{
         waitUntil(^(DoneCallback done) {
             done();
         });
+    });
+});
+*/
+describe(@"Test NSNumber loops",^{
+    it(@"can count up",^{
+        NSMutableArray* thing = [NSMutableArray arrayWithCapacity: 10];
+        [@0 to: 9 do:^(NSInteger i) {
+            [thing addObject: @(i)];
+        }];
+        
+        expect(thing.count).to.equal(10);
+        
     });
 });
 
