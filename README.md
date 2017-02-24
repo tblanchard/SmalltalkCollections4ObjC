@@ -13,12 +13,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-SmalltalkCollections is available through [CocoaPods](http://cocoapods.org). To install
+SmalltalkCollections is meant to be available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SmalltalkCollections"
 ```
+
+but I am not at all certain I have the pod manifest correct.  So downloading and just adding the files to your project might be your best bet.  Experienced pod builders that want to help - pull requests would be super welcome.
+
 
 ## Author
 
