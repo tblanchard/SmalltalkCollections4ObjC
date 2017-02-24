@@ -27,6 +27,7 @@ typedef id (^ElementInjector)(id, id);
 typedef void (^StringMutator)(NSString *);
 
 typedef void(^ElementIterator)(NSInteger);
+typedef id(^ElementIndexedMutator)(NSInteger);
 
 #import "NSArray+SmalltalkCollections.h"
 #import "NSDictionary+SmalltalkCollections.h"

@@ -13,5 +13,7 @@
 -(void)timesRepeat:(ElementDefault)block;
 -(void)to:(NSInteger)stop do:(ElementIterator)block;
 -(void)to:(NSInteger)stop by:(NSInteger)step do:(ElementIterator)block;
+-(NSArray*)to:(NSInteger)stop collect:(ElementIndexedMutator)block;
+-(NSArray*)to:(NSInteger)stop by:(NSInteger)step collect:(ElementIndexedMutator)block;
 
 @end

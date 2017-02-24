@@ -13,13 +13,13 @@
 
 @implementation NSSet (SmalltalkCollections)
 
-- (NSSet *)do:(ElementMutator)block
+- (instancetype)do:(ElementMutator)block
 {
     [[self allObjects] do:block];
     return self;
 }
 
-- (NSSet *)collect:(ElementTransformer)block
+- (instancetype)collect:(ElementTransformer)block
 {
     return [[self class] setWithArray:[[self allObjects]collect:block]];
 }
@@ -29,14 +29,25 @@
     return [[self allObjects]inject:initial into:block];
 }
 
-- (NSSet *)reject:(ElementFilter)block
+- (instancetype)reject:(ElementFilter)block
 {
     return [[self class] setWithArray:[[self allObjects]reject:block]];
 }
 
-- (NSSet *)select:(ElementFilter)block
+- (instancetype)select:(ElementFilter)block
 {
     return [[self class] setWithArray:[[self allObjects]select:block]];
 }
+
+- (instancetype) copyWithout:(id)object
+{
+    return [[self class] setWithArray: [[self allObjects]copyWithout:object]];
+}
+
+- (instancetype) copyWith:(id)object
+{
+    return [[self class] setWithArray: [[self allObjects]copyWith:object]];
+}
+
 
 @end

@@ -46,11 +46,30 @@
     }
     
     for (NSInteger i = self.integerValue;
-         (start <= stop && step > 0) || (start >= stop && step < 0);
+         (i <= stop && step > 0) || (i >= stop && step < 0);
          i += step)
     {
         block(i);
     }
+}
+
+-(NSArray*)to:(NSInteger)stop collect:(ElementIndexedMutator)block
+{
+    NSMutableArray* __block array = [NSMutableArray array];
+    [self to: stop do:^(NSInteger i) {
+        [array addObject:block(i)];
+    }];
+    return array;
+}
+
+
+-(NSArray*)to:(NSInteger)stop by:(NSInteger)step collect:(ElementIndexedMutator)block
+{
+    NSMutableArray* __block array = [NSMutableArray array];
+    [self to: stop by:step do:^(NSInteger i) {
+        [array addObject:block(i)];
+    }];
+    return array;
 }
 
 

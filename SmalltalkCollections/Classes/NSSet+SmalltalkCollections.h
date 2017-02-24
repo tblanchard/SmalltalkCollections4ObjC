@@ -11,13 +11,15 @@
 #import <Foundation/Foundation.h>
 #import "SmalltalkCollections.h"
 
-@class MDPair;
-
-
 @interface NSSet (SmalltalkCollections)
-- (NSSet *)do:(ElementMutator)block;
-- (NSSet *)collect:(ElementTransformer)block;
+
+- (instancetype)do:(ElementMutator)block;
+- (instancetype)collect:(ElementTransformer)block;
 - (id)inject:(id)initial into:(ElementInjector)block;
-- (NSSet *)reject:(ElementFilter)block;
-- (NSSet *)select:(ElementFilter)block;
+- (instancetype)reject:(ElementFilter)block;
+- (instancetype)select:(ElementFilter)block;
+
+-(instancetype)copyWithout:(id)object;
+-(instancetype)copyWith:(id)object;
+
 @end
